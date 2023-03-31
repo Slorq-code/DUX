@@ -1,0 +1,63 @@
+// ------------ Media query responsive screens ------------ //
+@mixin xs() {
+    @media only screen and (max-width: 330px) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media only screen and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin lg() {
+    @media only screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin xlg() {
+    @media only screen and (min-width: 1700px) {
+        @content;
+    }
+}
+
+// ------------ position mixin´s especifics ------------ //
+
+@mixin mxHeight($value) {
+    @media (max-height: $value) {
+        @content;
+    }
+}
+
+@mixin mnHeight($value) {
+    @media (min-height: $value) {
+        @content;
+    }
+}
+
+@mixin mxWidth($value) {
+    @media (max-width: $value) {
+        @content;
+    }
+}
+
+@mixin mnWidth($value) {
+    @media (min-width: $value) {
+        @content;
+    }
+}
+
+
+@mixin bwtValueWidth($value1, $value2) {
+    @media (min-width: $value1) and (max-width: $value2) {
+        @content;
+    }
+}
