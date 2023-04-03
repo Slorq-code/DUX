@@ -7,12 +7,17 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+ *, *::before, *::after {
+  box-sizing: border-box;
+}
 
 html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  margin: 0;
+  padding: 0;
 }
 
 /* Sections
@@ -24,6 +29,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 /**
@@ -214,6 +220,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -314,6 +321,7 @@ textarea {
  */
 
 [type="search"] {
+  appearance: textfield;
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -325,6 +333,7 @@ textarea {
  */
 
 [type="search"]::-webkit-search-decoration {
+  appearance: none;
   -webkit-appearance: none;
 }
 
@@ -334,6 +343,7 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
+  appearance: button;
   -webkit-appearance: button;
   /* 1 */
   font: inherit;

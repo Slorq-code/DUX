@@ -3,9 +3,71 @@ name: "SingUpView";
 </script>
 <template>
     <div class="SingUpView" >
-        <h1>
-            Hola desde SingUpView
-        </h1>
+        <img  class="SingUpView__title" src="../assets/Imagenes/Desktop/Titulo_registro.png" alt="Titulo de la pagina">
+        <span class="SingUpView__text">Registrate para que puedas participar por los premios que tenemos para ti</span>
+        <div class="SingUpView__formRow">
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+        </div>
+        <div class="SingUpView__formRow">
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+        </div>
+        <div class="SingUpView__formRow">
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+        </div>
+        <div class="SingUpView__formRow">
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+        </div>
+        <div class="SingUpView__formRow">
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+            <div class="SingUpView__formRow__formBox">
+                                        <div class="FutureComponent" >
+                                        aqui ira un componente
+                                        </div>
+            </div>
+        </div>
+        <div class="FutureComponent" >
+            aqui ira un componente
+        </div>
     </div>
 </template>
 
@@ -15,18 +77,37 @@ name: "SingUpView";
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px 0;
+    flex-direction: column;
+    margin: 60px 0 40px 0;
     width: 100%;
-    height: 70vh;
-    background: #262056 0% 0% no-repeat padding-box;
+    height: 80vh;
+    background-color: #26205670;
     box-shadow: 0px 6px 8px #00000029;
     border-radius: 15px;
-    opacity: 0.45;
-}
-@include mobile() {
-    .SingUpView {
-        background-color: green;
+    &__formRow {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80%;
+        margin: 15px 0;
+        &__formBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            
+        }
     }
+}
+
+.FutureComponen {
+    background-color: white;
+    border: 1px orange solid;
+    width: 60%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

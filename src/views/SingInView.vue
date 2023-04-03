@@ -115,21 +115,20 @@ name: "SingInView";
 .futuroComponente {
     width: 80%;
     height: 40px;
-    background-color: red;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.291);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 @include xlg() {
     .SingInView {
-        &__Image {
-            &__Logo {}
-        }
         &__OptionsForLogin {
             &__details1 {
                 width: 16%;
+                bottom: 0 !important;
+                right: 0 !important;
             }
             &__details2 {
                 width: 14%;
@@ -138,22 +137,28 @@ name: "SingInView";
                 &__title {
                     font-size: 40px;
                 }
-                &__text {}
+                &__text {
+                    font-size: 30px;
+                }
             }
         }
     }
 }
+
 @include lg() {
     .SingInView {
-        &__Image {
-            &__Logo {}
-        }
         &__OptionsForLogin {
-            &__details1 {}
-            &__details2 {}
+            &__details1 {
+                bottom: -5%;
+                right: -5%;
+            }
+            &__details2 {
+                top: -1%;
+            }
             &__Login {
-                &__title {}
-                &__text {}
+                &__text {
+                    font-size: 25px;
+                }
             }
         }
     }
@@ -162,49 +167,80 @@ name: "SingInView";
 
 @include bwtValueWidth(1200px, 1400px) {
     .SingInView {
+        margin: 40px 0 60px 0;
         &__Image {
-            &__Logo {}
+            &__Logo {
+                width: 80%;
+            }
         }
         &__OptionsForLogin {
-            &__details1 {}
-            &__details2 {}
+            &__details1 {
+                bottom: -3%;
+                right: -3%;
+                width: 20%;
+            }
+            &__details2 {
+                top: -1%;
+                width: 16%;
+            }
             &__Login {
-                &__title {}
-                &__text {}
+                height: 90%;
+                &__title {
+                    font-size: 25px;
+                }
+                &__text {
+                    font-size: 20px;
+                }
             }
         }
     }
 }
-
 
 @include tablet() {
     .SingInView {
+        margin: 40px 0 60px 0;
+        gap: 0;
         &__Image {
-            &__Logo {}
+            &__Logo {
+                width: 75%;
+            }
         }
         &__OptionsForLogin {
-            &__details1 {}
-            &__details2 {}
+            width: 50%;
+            &__details1 {
+                bottom: -3%;
+                right: -3%;
+                width: 20%;
+            }
+            &__details2 {
+                top: -1%;
+                width: 16%;
+            }
             &__Login {
-                &__title {}
-                &__text {}
+                &__title {
+                    font-size: 23px;
+                }
+                &__text {
+                    font-size: 18px;
+                }
             }
         }
     }
 }
-
 @include mobile() {
     .SingInView {
         flex-direction: column;
 
         &__Image {
             width: 100%;
-            
-            &__Logo {}
+
+            &__Logo {
+                max-width: 380px;
+            }
         }
 
         &__OptionsForLogin {
-            width: 100%;
+            width: 100% !important;
 
             &__details1 {
                 height: 25%;
@@ -236,20 +272,26 @@ name: "SingInView";
     }
 }
 
+
+
 @include xs() {
     .SingInView {
         &__Image {
-            &__Logo {}
-        }
-        &__OptionsForLogin {
-            &__details1 {}
-            &__details2 {}
-            &__Login {
-                &__title {}
-                &__text {}
+            &__Logo {
+                width: 60%;
             }
         }
+        // &__OptionsForLogin {
+        //     &__details1 {}
+        //     &__details2 {}
+        //     &__Login {
+        //         &__title {}
+        //         &__text {}
+        //     }
+        // }
     }
 }
+
+
 
 </style>

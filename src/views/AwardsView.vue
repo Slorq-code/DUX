@@ -3,9 +3,11 @@ name: "AwardsView";
 </script>
 <template>
     <div class="AwardsView" >
-        <h1>
-            Hola desde AwardsView
-        </h1>
+            <img  class="AwardsView__title" src="../assets/Imagenes/Desktop/titulo_premios.png" alt="Titulo">
+        <div class="AwardsView__awardsContainer" >
+            <img  class="AwardsView__awardsContainer__premiosDesktop" src="../assets/Imagenes/Desktop/Premios.png" alt="Premios">
+            <img  class="AwardsView__awardsContainer__premiosMobile" src="../assets/Imagenes/Mobile/Premios.png" alt="Premios">
+        </div>
     </div>
 </template>
 
@@ -15,17 +17,116 @@ name: "AwardsView";
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    position: relative;
     margin: 60px 0;
     width: 100%;
     height: 70vh;
-    background: #262056 0% 0% no-repeat padding-box;
+    background-color: #26205670;
     box-shadow: 0px 6px 8px #00000029;
     border-radius: 15px;
-    opacity: 0.45;
-}
-@include mobile() {
-    .AwardsView {
-        background-color: green;
+        &__title {
+            position: absolute;
+            top: 3%;
+            width: 18%;
+        }
+    &__awardsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 75%;
+        &__premiosDesktop {
+            width: 100%;
+        }
+        &__premiosMobile {
+            display: none;
+        }
     }
 }
+
+
+//   ---------------- estructure -----------------------
+// .AwardsView{
+//     &__title {
+//     }
+//     &__awardsContainer {
+//         &__premiosDesktop {
+//         }
+//         &__premiosMobile {
+//         }
+//     }
+// }
+//   --------------------------------------------------
+
+
+
+@include xlg() {
+    .AwardsView{
+        &__awardsContainer {
+            &__premiosDesktop {
+                width: 95%;
+            }
+        }
+    }
+}
+
+@include bwtValueWidth(1200px, 1400px) {
+    .AwardsView{
+        width: 77%;
+        &__title {
+            width: 17%;
+        }
+        &__awardsContainer {
+            &__premiosDesktop {
+                width: 92%;
+            }
+        }
+    }
+}
+
+@include tablet() {
+    .AwardsView{
+        width: 77%;
+        height: 80vh;
+        &__title {
+        top: 3%;
+        width: 50%;
+        }
+        &__awardsContainer {
+            &__premiosDesktop {
+                display: none;
+            }
+            &__premiosMobile {
+                display: initial;
+                width: 67%;
+                margin: 15% 0 0 0;
+            }
+        }
+    }
+}
+
+@include mobile() {
+    .AwardsView{
+        width: 100%;
+        &__awardsContainer {
+            &__premiosMobile {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@include xs() {
+    .AwardsView{
+        &__awardsContainer {
+            &__premiosMobile {
+                width: 80%;
+            }
+        }
+    }
+}
+
+
+
 </style>
