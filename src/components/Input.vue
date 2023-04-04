@@ -40,11 +40,15 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    align-content: center;
+    align-items: flex-start;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     height: auto;
-    &__Span{}
+    &__Span{
+        color: white;
+        font-family: MyriadPro;
+        font-size: 25px;
+    }
     &__field{
         display: flex;
         justify-content: center;
@@ -53,8 +57,69 @@
         height: 70px;
         background: #FFFAE5 0% 0% no-repeat padding-box;
         border: 1px solid #F7D756;
+        text-align: center;
     }
-
+    &__field::placeholder{
+        color: #D3C68A;
+        font-family: MyriadPro;
+        font-size: 25px;
+    }
 }
+
+
+/* estructure
+    .Input {
+        &__Span{
+        }
+        &__field{
+        }
+        &__field::placeholder{
+        }
+    }
+*/
+
+@include bwtValueWidth(1200px, 1400px) { 
+    .Input {
+        &__Span{
+            font-size: 18px;
+        }
+        &__field{
+            height: 45px;
+        }
+        &__field::placeholder{
+            font-size: 18px;
+        }
+    }
+}
+
+@include mobile() { 
+    .Input {
+        &__Span{
+            font-size: 18px;
+        }
+        &__field{
+            height: 40px;
+        }
+        &__field::placeholder{
+            font-size: 18px;
+        }
+    }
+}
+
+@include xs() { 
+    .Input {
+        &__Span{
+            font-size: 15px;
+        }
+        &__field{
+            height: 35px;
+        }
+        &__field::placeholder{
+            font-size: 15px;
+        }
+    }
+}
+
+
 
 </style>

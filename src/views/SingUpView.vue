@@ -1,5 +1,15 @@
-<script setup>
+<script>
+
+import Button from "../components/BottonComponent.vue";
+import Input from "../components/Input.vue";
 name: "SingUpView";
+
+export default {
+    components: {
+        Button,
+        Input,
+    }
+}
 </script>
 <template>
     <div class="SingUpView" >
@@ -7,66 +17,46 @@ name: "SingUpView";
         <span class="SingUpView__text">Registrate para que puedas participar por los premios que tenemos para ti</span>
         <div class="SingUpView__formRow">
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="Ingresa tus nombre" label="Nombres"/>
             </div>
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="Ingresa tus apellidos" label="Apellidos"/>
             </div>
         </div>
         <div class="SingUpView__formRow">
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="ESTO DEBE SER SELECT" label="Tipo de documento"/>
             </div>
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="Ingresa tu Núm. de identificación" label="# de identificación"/>
             </div>
         </div>
         <div class="SingUpView__formRow">
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="Ingresa tu Núm. Celular" label="Celular"/>
             </div>
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="ESTO DEBE SER SELECT" label="Operador"/>
             </div>
         </div>
         <div class="SingUpView__formRow">
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="Ingresa tu correo" label="Correo electronico"/>
             </div>
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="ESTO DEBE SER SELECT" label="Departamento"/>
             </div>
         </div>
         <div class="SingUpView__formRow">
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="ESTO DEBE SER SELECT" label="Ciudad"/>
             </div>
             <div class="SingUpView__formRow__formBox">
-                                        <div class="FutureComponent" >
-                                        aqui ira un componente
-                                        </div>
+                <Input placeHolder="ESTO DEBE SER CHECKBOX" label="aceptar terms and con"/>
             </div>
         </div>
-        <div class="FutureComponent" >
-            aqui ira un componente
+        <div class="SingUpView__Send">
+            <Button kind="1"  label="Registrarme"/>
         </div>
     </div>
 </template>
@@ -86,6 +76,9 @@ name: "SingUpView";
     border-radius: 15px;
     &__text {
         text-align: center;
+        font-size: 28px;
+        color: white;
+        font-family: MyriadPro;
     }
     &__title {
         width: 18%;
@@ -95,15 +88,22 @@ name: "SingUpView";
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 80%;
+        width: 100%;
         margin: 15px 0;
         &__formBox {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80%;
+            width: 45%;
             
         }
+    }
+    &__Send {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: 40px 0 80px 0;
     }
 }
 .FutureComponent {
@@ -118,23 +118,30 @@ name: "SingUpView";
 
 /*     estructure
 .SingUpView{
+    &__text {
+    }
+    &__title {
+    }
     &__formRow {
         &__formBox {
         }
+    }
+    &__Send {
     }
 }
 */
 
 
-/*
 @include xlg() {
     .SingUpView{
         &__formRow {
             &__formBox {
+                width: 35%;
             }
         }
     }
 }
+/*
 @include lg() {
     .SingUpView{
         &__formRow {
@@ -155,6 +162,15 @@ name: "SingUpView";
 @include bwtValueWidth(1200px, 1400px) {
     .SingUpView{
         width: 77%;
+        &__text {
+            max-width: 60%;
+            font-size: 18px;
+        }
+        &__formRow {
+            &__formBox {
+                width: 37%;
+            }
+        }
     }
 }
 @include mobile() {
@@ -162,23 +178,34 @@ name: "SingUpView";
         &__title {
             width: 50%;
         }
+        &__text {
+            font-size: 18px;
+            max-width: 80%;
+            margin: 10px 0 0 0;
+        }
         &__formRow {
             flex-direction: column;
             gap: 30px;
-            width: 90%;
-        }
-    }
-}
-/*
-@include xs() {
-    .SingUpView{
-        &__formRow {
+            width: 100%;
             &__formBox {
+                width: 85%;
             }
         }
+        &__Send {
+            width: 100%;
+        }
     }
 }
-*/
+
+@include xs() {
+    .SingUpView{
+        &__text {
+            font-size: 15px;
+            max-width: 70%;
+        }
+    }
+}
+
 
 
 

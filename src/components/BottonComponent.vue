@@ -47,4 +47,38 @@
     }
 }
 
+/*  structure
+.Button {
+    &__Span {
+    }
+    &__Background {
+    }
+}
+*/
+@include bwtValueWidth(1200px, 1400px) {
+    .Button {
+        width: 70%;
+        &__Span {
+            font-size: 20px;
+        }
+    }
+}
+
+@include mobile() {
+    .Button {
+        width: 100%;
+        &__Span {
+            font-size: 20px;
+        }
+    }
+}
+
+@include xs() {
+    .Button {
+        &__Span {
+            font-size: 20px;
+        }
+    }
+}
+
 </style>
