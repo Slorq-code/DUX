@@ -1,13 +1,27 @@
-<script setup>
+<script>
+import HeaderDsk from "./components/HeaderDsk.vue";
+import HeaderMbl from "./components/HeaderMbl.vue";
+import Footer from "./components/Footer.vue";
 import ScrollPage from "./views/ScrollPage.vue";
+
+export default {
+    components: {
+      HeaderDsk,
+      HeaderMbl,
+      Footer,
+      ScrollPage
+    }
+}
+
 </script>
 
 <template>
   <div class="firstContainer" >
     <div class="all">
-      <div class="explameHeader" ></div>
+      <HeaderDsk/>
+      <HeaderMbl/>
       <ScrollPage/>
-      <div class="explameFooter" ></div>
+      <Footer/>
     </div>
   </div>
 </template>
@@ -16,8 +30,12 @@ import ScrollPage from "./views/ScrollPage.vue";
 @import "./src/assets/scss/mixins";
 
 .firstContainer {
-  position: relative;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
 }
 .all {
   display: flex;
@@ -25,25 +43,7 @@ import ScrollPage from "./views/ScrollPage.vue";
   flex-direction: column;
   background-image: url("./assets/Imagenes/Desktop/Fondo_web_Dux.jpg");
   width: 100%;
-}
-.explameHeader {
-  width: 90vw;
-  height: 80px;
-  background-color: #f7d755;
-  position:sticky;
-  top: 0;
-  left: 5vw;
-  z-index: 9;
-}
-.explameFooter {
-  width: 100%;
-  height: 60px;
-  background-color: #262156;
-  position:sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9;
+  height: auto;
 }
 
 </style>

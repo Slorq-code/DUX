@@ -1,6 +1,19 @@
-<script setup>
+<script >
+import Button from "../components/BottonComponent.vue";
+import Input from "../components/Input.vue";
 name: "SingInView";
+
+export default {
+    components: {
+        Button,
+        Input,
+    }
+}
+
 </script>
+
+
+
 <template>
     <div class="SingInView">
         <div class="SingInView__Image">
@@ -16,14 +29,14 @@ name: "SingInView";
                 <h2 class="SingInView__OptionsForLogin__Login__title">
                     INICIAR SESIÓN
                 </h2>
-                <div class="futuroComponente">aqui va un futuro componente</div>
-                <div class="futuroComponente">aqui va un futuro componente</div>
+                <Input placeHolder="Ingresa tu núm. celular"/>
+                <Button label="INGRESAR" kind="1" />
                 <hr class="SingInView__OptionsForLogin__Login__separation" />
                 <span class="SingInView__OptionsForLogin__Login__text">
                     ¿Aún no estás registrado? Regístrate y podrás participal por los
                     premios
                 </span>
-                <div class="futuroComponente">aqui va un futuro componente</div>
+                <Button label="REGISTRARME" kind="1" />
             </div>
         </div>
     </div>
@@ -37,7 +50,7 @@ name: "SingInView";
     justify-content: center;
     align-items: center;
     gap: 5%;
-    margin: 60px 0;
+    margin: 0 0 60px 0;
     width: 100%;
     height: 70vh;
     border-radius: 15px;
@@ -63,10 +76,8 @@ name: "SingInView";
         width: 45%;
         height: 100%;
 
-        // background-color: paleturquoise;
         &__details1 {
             position: absolute;
-
             bottom: 0;
             right: 0;
         }
@@ -130,13 +141,16 @@ name: "SingInView";
                 bottom: 0 !important;
                 right: 0 !important;
             }
+
             &__details2 {
                 width: 14%;
             }
+
             &__Login {
                 &__title {
                     font-size: 40px;
                 }
+
                 &__text {
                     font-size: 30px;
                 }
@@ -152,9 +166,11 @@ name: "SingInView";
                 bottom: -5%;
                 right: -5%;
             }
+
             &__details2 {
                 top: -1%;
             }
+
             &__Login {
                 &__text {
                     font-size: 25px;
@@ -167,27 +183,33 @@ name: "SingInView";
 
 @include bwtValueWidth(1200px, 1400px) {
     .SingInView {
-        margin: 40px 0 60px 0;
+        margin: -30px 0 60px 0;
+
         &__Image {
             &__Logo {
                 width: 80%;
             }
         }
+
         &__OptionsForLogin {
             &__details1 {
                 bottom: -3%;
                 right: -3%;
                 width: 20%;
             }
+
             &__details2 {
                 top: -1%;
                 width: 16%;
             }
+
             &__Login {
                 height: 90%;
+
                 &__title {
                     font-size: 25px;
                 }
+
                 &__text {
                     font-size: 20px;
                 }
@@ -200,26 +222,32 @@ name: "SingInView";
     .SingInView {
         margin: 40px 0 60px 0;
         gap: 0;
+
         &__Image {
             &__Logo {
                 width: 75%;
             }
         }
+
         &__OptionsForLogin {
             width: 50%;
+
             &__details1 {
                 bottom: -3%;
                 right: -3%;
                 width: 20%;
             }
+
             &__details2 {
                 top: -1%;
                 width: 16%;
             }
+
             &__Login {
                 &__title {
                     font-size: 23px;
                 }
+
                 &__text {
                     font-size: 18px;
                 }
@@ -227,8 +255,10 @@ name: "SingInView";
         }
     }
 }
+
 @include mobile() {
     .SingInView {
+        margin: 20px 0 60px 0;
         flex-direction: column;
 
         &__Image {
@@ -281,17 +311,11 @@ name: "SingInView";
                 width: 60%;
             }
         }
-        // &__OptionsForLogin {
-        //     &__details1 {}
-        //     &__details2 {}
-        //     &__Login {
-        //         &__title {}
-        //         &__text {}
-        //     }
-        // }
+
+        &__OptionsForLogin {
+            &__details2 {
+                height: 33%;
+            }
+        }
     }
-}
-
-
-
-</style>
+}</style>

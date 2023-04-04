@@ -109,6 +109,9 @@ name: "HowToParticipateView";
 @include mobile() {
     .HowToParticipateView{
         width: 100%;
+        &__title {
+            width: 80%;
+        }
         &__howContainer {
             &__premiosMobile {
                 width: 90%;

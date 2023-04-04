@@ -26,7 +26,6 @@ name: "ScrollPage";
     align-items: center;
     flex-direction: column;
     z-index: 8;
-    margin: 90px 0 0 0 ;
     width: 80%;
 }
 .exampleOtherViews {
@@ -38,16 +37,6 @@ name: "ScrollPage";
     border-radius: 15px;
     opacity: 0.45;
 }
-
-@include xlg() {
-}
-@include lg() {
-}
-@include bwtValueWidth(1200px, 1400px) {
-    .pageContainer {
-        margin: 60px 0 70px 0 ;
-    }
-}
 @include tablet() {
     .pageContainer {
         margin: 55px 0 70px 0 ;
@@ -56,10 +45,8 @@ name: "ScrollPage";
 @include mobile() {
     .pageContainer {
         width: 90%;
-        margin: 0px 0 70px 0 ;
+        margin: -15px 0 25px 0 ;
     }
-}
-@include xs() {
 }
 
 </style>
