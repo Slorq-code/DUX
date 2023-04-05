@@ -1,13 +1,14 @@
 <script>
-
 import Button from "../components/BottonComponent.vue";
 import Input from "../components/Input.vue";
+import Select from "../components/Select.vue";
 name: "SingUpView";
 
 export default {
     components: {
         Button,
         Input,
+        Select,
     }
 }
 </script>
@@ -36,20 +37,17 @@ export default {
                 <Input placeHolder="Ingresa tu Núm. Celular" label="Celular"/>
             </div>
             <div class="SingUpView__formRow__formBox">
-                <Input placeHolder="ESTO DEBE SER SELECT" label="Operador"/>
-            </div>
-        </div>
-        <div class="SingUpView__formRow">
-            <div class="SingUpView__formRow__formBox">
                 <Input placeHolder="Ingresa tu correo" label="Correo electronico"/>
             </div>
+        </div>
+        <div class="SingUpView__formRow">
             <div class="SingUpView__formRow__formBox">
-                <Input placeHolder="ESTO DEBE SER SELECT" label="Departamento"/>
+                <Select label1="Departamento" label2="ciudad" type="departamento"/>
             </div>
         </div>
         <div class="SingUpView__formRow">
             <div class="SingUpView__formRow__formBox">
-                <Input placeHolder="ESTO DEBE SER SELECT" label="Ciudad"/>
+                <Input placeHolder="ESTO DEBE SER SELECT" label="Operador"/>
             </div>
             <div class="SingUpView__formRow__formBox">
                 <Input placeHolder="ESTO DEBE SER CHECKBOX" label="aceptar terms and con"/>
