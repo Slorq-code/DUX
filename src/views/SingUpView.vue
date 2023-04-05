@@ -41,8 +41,8 @@ export default {
             </div>
         </div>
         <div class="SingUpView__formRow">
-            <div class="SingUpView__formRow__formBox">
-                <Select label1="Departamento" label2="ciudad" type="departamento"/>
+            <div class="SingUpView__formRow__formBoxSelected">
+                <Select/>
             </div>
         </div>
         <div class="SingUpView__formRow">
@@ -93,6 +93,13 @@ export default {
             justify-content: center;
             align-items: center;
             width: 45%;
+            
+        }
+        &__formBoxSelected {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             
         }
     }
