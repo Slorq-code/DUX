@@ -71,7 +71,7 @@ export default {
     height: auto;
     background-color: #26205670;
     box-shadow: 0px 6px 8px #00000029;
-    border-radius: 15px;
+    border-radius: 20px;
     &__text {
         text-align: center;
         font-size: 28px;

@@ -2,14 +2,12 @@
 import HeaderDsk from "./components/HeaderDsk.vue";
 import HeaderMbl from "./components/HeaderMbl.vue";
 import Footer from "./components/Footer.vue";
-import ScrollPage from "./views/ScrollPage.vue";
 
 export default {
     components: {
       HeaderDsk,
       HeaderMbl,
       Footer,
-      ScrollPage
     }
 }
 
@@ -20,7 +18,7 @@ export default {
     <div class="all">
       <HeaderDsk/>
       <HeaderMbl/>
-      <ScrollPage/>
+        <router-view />
       <Footer/>
     </div>
   </div>
@@ -42,8 +40,15 @@ export default {
   align-items: center;
   flex-direction: column;
   background-image: url("./assets/Imagenes/Desktop/Fondo_web_Dux.jpg");
+  background-repeat: repeat;
   width: 100%;
   height: auto;
+}
+
+@include mobile() {
+  .all {
+    background-image: url("./assets/Imagenes/Mobile/Fondo_respons_Dux.jpg");
+  }
 }
 
 </style>

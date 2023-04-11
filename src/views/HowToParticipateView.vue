@@ -1,6 +1,9 @@
-<script setup>
+
+<script>
 name: "HowToParticipateView";
 </script>
+
+
 <template>
     <div class="HowToParticipateView" >
             <img  class="HowToParticipateView__title" src="../assets/Imagenes/Desktop/titulo_como_participar.png" alt="Titulo">
@@ -18,17 +21,18 @@ name: "HowToParticipateView";
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-grow: 1;
+    aspect-ratio: 2/1;
     position: relative;
     margin: 60px 0;
     width: 100%;
-    height: 70vh;
     background-color: #26205670;
     box-shadow: 0px 6px 8px #00000029;
-    border-radius: 15px;
+    border-radius: 20px;
         &__title {
             position: absolute;
             top: 3%;
-            width: 26%;
+            width: 25%;
         }
     &__howContainer {
         display: flex;
@@ -37,8 +41,7 @@ name: "HowToParticipateView";
         width: 100%;
         height: 75%;
         &__premiosDesktop {
-            margin: 10% 0 0 0;
-            width: 80%;
+            width: 100%;
         }
         &__premiosMobile {
             display: none;
@@ -49,15 +52,15 @@ name: "HowToParticipateView";
 
 //   ---------------- estructure -----------------------
 // .HowToParticipateView{
-//         &__title {
+//     &__title {
+//     }
+//     &__howContainer {
+//         &__premiosDesktop {
 //         }
-//         &__howContainer {
-//             &__premiosDesktop {
-//             }
-//             &__premiosMobile {
-//             }
+//         &__premiosMobile {
 //         }
 //     }
+// }
 //   --------------------------------------------------
 
 
@@ -66,20 +69,20 @@ name: "HowToParticipateView";
     .HowToParticipateView{
         &__howContainer {
             &__premiosDesktop {
-                margin: 5% 0 0 0;
-                width: 80%;
+                width: 95%;
+                margin: 7% 0 0 0;
             }
         }
     }
 }
 
-
 @include bwtValueWidth(1200px, 1400px) {
     .HowToParticipateView{
-        width: 77%;
+        width: 70%;
         &__howContainer {
             &__premiosDesktop {
-                margin: 5% 0 0 0;
+                width: 92%;
+                margin: 7% 0 0 0;
             }
         }
     }
@@ -88,10 +91,9 @@ name: "HowToParticipateView";
 @include tablet() {
     .HowToParticipateView{
         width: 77%;
-        height: 80vh;
         &__title {
         top: 3%;
-        width: 50%;
+        width: 80%;
         }
         &__howContainer {
             &__premiosDesktop {
@@ -100,7 +102,7 @@ name: "HowToParticipateView";
             &__premiosMobile {
                 display: initial;
                 width: 67%;
-                margin: 15% 0 0 0;
+                margin: 25% 0 5% 0;
             }
         }
     }
@@ -109,12 +111,9 @@ name: "HowToParticipateView";
 @include mobile() {
     .HowToParticipateView{
         width: 100%;
-        &__title {
-            width: 80%;
-        }
         &__howContainer {
             &__premiosMobile {
-                width: 90%;
+                width: 80%;
             }
         }
     }
@@ -124,7 +123,7 @@ name: "HowToParticipateView";
     .HowToParticipateView{
         &__howContainer {
             &__premiosMobile {
-                width: 92%;
+                width: 80%;
             }
         }
     }

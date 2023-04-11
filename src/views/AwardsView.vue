@@ -18,13 +18,14 @@ name: "AwardsView";
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-grow: 1;
+    aspect-ratio: 2/1;
     position: relative;
     margin: 60px 0;
     width: 100%;
-    height: 70vh;
     background-color: #26205670;
     box-shadow: 0px 6px 8px #00000029;
-    border-radius: 15px;
+    border-radius: 20px;
         &__title {
             position: absolute;
             top: 3%;
@@ -73,7 +74,7 @@ name: "AwardsView";
 
 @include bwtValueWidth(1200px, 1400px) {
     .AwardsView{
-        width: 77%;
+        width: 70%;
         &__title {
             width: 17%;
         }
@@ -88,7 +89,6 @@ name: "AwardsView";
 @include tablet() {
     .AwardsView{
         width: 77%;
-        height: 80vh;
         &__title {
         top: 3%;
         width: 50%;
@@ -100,7 +100,7 @@ name: "AwardsView";
             &__premiosMobile {
                 display: initial;
                 width: 67%;
-                margin: 15% 0 0 0;
+                margin: 18% 0 4% 0;
             }
         }
     }

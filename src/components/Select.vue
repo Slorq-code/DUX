@@ -26,7 +26,6 @@ export default {
                 text: s.departamento,
             }));
         });
-
         const cities = computed(() => {
             if (selectedDepartment.value) {
                 const department = dataColombia.value.find(
@@ -41,7 +40,6 @@ export default {
             }
             return [];
         });
-
         return {
             selectedDepartment,
             selectedCity,
@@ -57,8 +55,8 @@ export default {
     <div class="Select">
         <div class="Select__Box">
             <span class="Select__Box__Span">Departamento</span>
-            <select class="Select__Box__field" name="Departamentos options" id="1" v-model="selectedDepartment">
-                <option class="Select__Box__field__character" disabled selected value="Selecionar departamento">Seleccionar departamento</option>
+            <select class="Select__Box__field" name="Department options" id="" v-model="selectedDepartment">
+                <option class="Select__Box__field__character" disabled selected value="">Seleccionar departamento</option>
                 <option class="Select__Box__field__character" v-for="(departamento, index) in departments" :key="index"
                     :value="departamento.value">
                     {{ departamento.text }}
@@ -67,7 +65,7 @@ export default {
         </div>
         <div class="Select__Box">
             <span class="Select__Box__Span">Ciudad</span>
-            <select class="Select__Box__field" name="Cities options" id="2" v-model="selectedCity">
+            <select class="Select__Box__field" name="Cities options" id="" v-model="selectedCity">
                 <option class="Select__Box__field__character" disabled selected value="">Seleccionar ciudad</option>
                 <option class="Select__Box__field__character" v-for="(ciudad, index) in cities" :key="index"
                     :value="ciudad.value">

@@ -1,9 +1,12 @@
-import { createVuetify } from "vuetify";
-
-Vue.use(Vuetify)
+import { createVuetify } from "vuetify"
+import "vuetify/dist/vuetify.css"
+import "vuetify/styles"
 
 export default createVuetify({
-display: {
+    components: {
+        VTextarea
+    },
+    display: {
         mobileBreakpoint: "sm",
         thresholds: {
             xs: 0,
@@ -13,4 +16,4 @@ display: {
             xl: 1280,
         },
     },
-});
+})

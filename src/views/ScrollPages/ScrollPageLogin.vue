@@ -1,24 +1,26 @@
 <script setup>
-import SingInView from "../views/SingInView.vue";
-import SingUpView from "../views/SingUpView.vue";
-import AwardsView from "../views/AwardsView.vue";
-import HowToParticipateView from "../views/HowToParticipateView.vue";
+import AwardsView from "../AwardsView.vue";
+import HowToParticipateView from "../HowToParticipateView.vue";
+import ContactUs from "../ContactUs.vue";
+import MyCodesView from "../MyCodesView.vue";
+import RegisterCodesView from "../RegisterCodeView.vue";
 name: "ScrollPage";
 </script>
 
 
 <template>
     <div class="pageContainer" >
-        <SingInView/>
+        <RegisterCodesView/>
+        <MyCodesView/>
         <AwardsView/>
         <HowToParticipateView/>
-        <SingUpView/>
+        <ContactUs/>
     </div>
 </template>
 
 
 <style lang="scss" scoped>
-@import "../assets/scss/mixins";
+@import "../../assets/scss/mixins";
 
 .pageContainer {
     display: flex;

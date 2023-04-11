@@ -1,15 +1,29 @@
+
 <script >
 import Button from "../components/BottonComponent.vue";
 import Input from "../components/Input.vue";
-name: "SingInView";
+import { useRouter } from "vue-router";
+
 export default {
+    name: "SingInView",
     components: {
         Button,
         Input,
+    },
+    setup() {
+        const router = useRouter();
+        function loginRoute() {
+            router.push("/mi-cuenta");
+        }
+        return {
+            loginRoute,
+        };
     }
 }
 
 </script>
+
+
 
 <template>
     <div class="SingInView">
@@ -27,7 +41,9 @@ export default {
                     <Input placeHolder="Ingresa tu núm. celular"/>
                 </div>
                 <div class="SingInView__OptionsForLogin__Login__ButtonContainer">
-                    <Button label="INGRESAR" kind="1" />
+                    
+                    <Button @click="loginRoute" label="INGRESAR" kind="1" />
+
                 </div>
                 <hr class="SingInView__OptionsForLogin__Login__separation"/>
                 <span class="SingInView__OptionsForLogin__Login__text"> ¿Aún no estás registrado? Regístrate y podrás participal por los premios</span>
@@ -50,7 +66,7 @@ export default {
     margin: 0 0 60px 0;
     width: 100%;
     height: 70vh;
-    border-radius: 15px;
+    border-radius: 20px;
     &__Image {
         display: flex;
         justify-content: center;
@@ -84,9 +100,9 @@ export default {
             align-items: center;
             flex-direction: column;
             gap: 5%;
-            width: 85%;
-            height: 85%;
-            background-color: #26205670;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: rgba(38, 32, 86, 0.4392156863);
             border-radius: 20px;
             &__title {
                 font-size: 30px;
@@ -209,7 +225,8 @@ export default {
                 width: 16%;
             }
             &__Login {
-                height: 90%;
+                width: 85%;
+                aspect-ratio: 1/0.9;
                 &__title {
                     font-size: 20px;
                 }
@@ -286,8 +303,8 @@ export default {
             }
             &__Login {
                 gap: 2%;
-                height: 100%;
                 width: 100%;
+                aspect-ratio: 1.8/1;
                 &__title {
                     font-size: 20px;
                     margin: 10px 0 0 0;
